@@ -1,4 +1,4 @@
-### [pitchchanger.lua](./pitchchanger.lua)
+### [pitchchanger](./pitchchanger.lua) for mpv
 
 Control audio pitch in half-tone steps.
 <kbd>Ctrl+]</kbd> increases,
