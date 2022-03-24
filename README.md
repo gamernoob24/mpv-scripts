@@ -7,7 +7,9 @@ Control audio pitch in half-tone steps.
 
 ## Installation
 
-put it in the Sctipts folder
+put them in the Scripts config
 
+and add this line to mpv.conf
 
+<kbd>af=@rb:rubberband</kbd>
 
