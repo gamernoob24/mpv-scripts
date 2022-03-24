@@ -1,6 +1,6 @@
 ### [pitchchanger](./pitchchanger.lua) for mpv
 
-Control audio pitch in half-tone steps.
+Control audio pitch by 0.01.
 <kbd>Ctrl+]</kbd> increases,
 <kbd>Ctrl+[</kbd> decreases 
 
