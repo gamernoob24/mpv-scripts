@@ -7,9 +7,9 @@
 -- Commands for key bindings:
 --
 -- * script-message-to pitchcontrol increase
---     Increase pitch by one half-tone. Bound to Alt+R.
+--     Increase pitch by one half-tone. Bound to Ctrl+].
 -- * script-message-to pitchcontrol decrease
---     Increase pitch by one half-tone. Bound to Alt+r.
+--     Increase pitch by one half-tone. Bound to Ctrl+[.
 -- * script-message-to pitchcontrol toggle
 --     Toggle pitching.
 -- * script-message-to pitchcontrol set_halftone_pitch <number>
