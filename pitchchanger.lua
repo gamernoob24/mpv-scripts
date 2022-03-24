@@ -39,7 +39,7 @@ local script_name = mp.get_script_name() -- "pitchcontrol"
 
 local RUBBERBAND_LABEL = string.format("rb", script_name)
 
-local current_pitch = 1
+local current_pitch = 0
 local active = true
 
 
@@ -48,11 +48,11 @@ function set_halftone_pitch(pitch, activate)
         activate = true
     end
     pitch = tonumber(pitch)
-    local pitch_scale = pitch /100 +0.99
+    local pitch_scale = pitch /100 +1
 	
     if active then
---        mp.commandv('af-command', RUBBERBAND_LABEL, 'set-pitch', pitch_scale)
---    elseif activate then
+        mp.commandv('af-command', RUBBERBAND_LABEL, 'set-pitch', pitch_scale)
+    elseif activate then
         mp.command(("af add @%s:rubberband=pitch-scale=%s"):format(RUBBERBAND_LABEL, pitch_scale))
         active = true
     else
@@ -63,8 +63,8 @@ function set_halftone_pitch(pitch, activate)
     current_pitch = pitch
 
     -- output new pitch
---    msg.debug(("new pitch-scale: %f"):format(pitch_scale))
---    mp.osd_message(("Pitch: %+d halftones [almost accurate but still kind of suck]"):format(pitch))
+    msg.debug(("new pitch-scale: %f"):format(pitch_scale))
+    mp.osd_message(("Pitch: %+d"):format(pitch))
 end
 
 
