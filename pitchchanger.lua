@@ -31,16 +31,16 @@
 -- IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 
-local utils = require 'mp.utils'
-local msg = require('mp.msg')
-local options = require('mp.options')
-local script_name = mp.get_script_name() -- "pitchcontrol"
+ utils = require 'mp.utils'
+ msg = require('mp.msg')
+ options = require('mp.options')
+ script_name = mp.get_script_name() -- "pitchcontrol"
 
 
-local RUBBERBAND_LABEL = string.format("rb", script_name)
+ RUBBERBAND_LABEL = string.format("rb", script_name)
 
-local current_pitch = 0
-local active = true
+ current_pitch = 0
+ active = true
 
 
 function set_halftone_pitch(pitch, activate)
@@ -48,7 +48,7 @@ function set_halftone_pitch(pitch, activate)
         activate = true
     end
     pitch = tonumber(pitch)
-    local pitch_scale = pitch /100 +1
+     pitch_scale = pitch /100 +1
 	
     if active then
         mp.command(("af add @%s:rubberband=pitch-scale=%s"):format(RUBBERBAND_LABEL, pitch_scale))
@@ -61,7 +61,6 @@ function set_halftone_pitch(pitch, activate)
     current_pitch = pitch
 
     -- output new pitch
-    msg.debug(("new pitch-scale: %f"):format(pitch_scale))
     mp.osd_message(("Pitch: %+d"):format(pitch))
 end
 
@@ -76,18 +75,6 @@ function decrease_handler()
 end
 
 
-function toggle_handler()
-    if active then
-        mp.command(("af del @%s"):format(RUBBERBAND_LABEL))
-        mp.osd_message(("'%s' deactivated"):format(script_name))
-        active = false
-    else
-        set_halftone_pitch(current_pitch, true)
-    end
-end
-
-
 mp.add_key_binding("Ctrl+[", 'increase', decrease_handler)
 mp.add_key_binding("Ctrl+]", 'decrease', increase_handler)
-mp.register_script_message('toggle', toggle_handler)
 mp.register_script_message('set_halftone_pitch', set_halftone_pitch)
