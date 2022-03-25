@@ -51,7 +51,7 @@ function set_halftone_pitch(pitch, activate)
      pitch_scale = pitch /100 +1
 	
     if active then
-        mp.command(("af add @%s:rubberband=pitch-scale=%s"):format(RUBBERBAND_LABEL, pitch_scale))
+        mp.commandv('af-command', RUBBERBAND_LABEL, 'set-pitch', pitch_scale)
         active = true
     else
         mp.osd_message(("'%s' is inactive"):format(script_name))
