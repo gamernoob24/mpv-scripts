@@ -9,7 +9,12 @@ Reset audio pitch
 
 ## Installation
 
-put them in the Scripts config
+Download the file or use this command
+
+```bash
+curl -s -o pitchchanger.lua https://github.com/gamernoob24/pitchchanger/raw/master/pitchchanger.lua
+```
+put them in the <kbd>~/.config/mpv/scripts</kbd>
 
 and add this line to mpv.conf
 
