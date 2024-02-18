@@ -10,6 +10,8 @@
 --     Increase pitch by one half-tone. Bound to Ctrl+].
 -- * script-message-to pitchcontrol decrease
 --     Increase pitch by one half-tone. Bound to Ctrl+[.
+-- * script-message-to pitchcontrol reset
+--     Increase pitch by one half-tone. Bound to Ctrl+ENTER.
 -- * script-message-to pitchcontrol toggle
 --     Toggle pitching.
 -- * script-message-to pitchcontrol set_halftone_pitch <number>

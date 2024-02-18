@@ -2,7 +2,9 @@
 
 Control audio pitch by 0.01.
 <kbd>Ctrl+]</kbd> increases,
-<kbd>Ctrl+[</kbd> decreases 
+<kbd>Ctrl+[</kbd> decreases,
+Reset audio pitch 
+<kbd>Ctrl+ENTER</kbd>
 
 
 ## Installation
