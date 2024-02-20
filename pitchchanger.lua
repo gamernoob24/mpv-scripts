@@ -77,8 +77,7 @@ function decrease_handler()
 end
 
 function reset_handler()
-   mp.commandv('af-command', RUBBERBAND_LABEL, 'set-pitch', 1)
-       mp.osd_message(("Pitch: 0"):format(pitch))
+   set_halftone_pitch(0, false)
 end
 
 mp.add_key_binding("Ctrl+[", 'increase', decrease_handler)

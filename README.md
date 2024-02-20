@@ -19,7 +19,3 @@ put them in the <kbd>~/.config/mpv/scripts</kbd>
 and add this line to mpv.conf
 
 <kbd>af=@rb:rubberband</kbd>
-
-## some notes
-finaly implemented the reset pitch
-but it goes back to the pitch that was set before
